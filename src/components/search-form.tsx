@@ -2,9 +2,9 @@
 
 import { Search } from 'lucide-react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { FormEvent, Suspense } from 'react'
+import { FormEvent } from 'react'
 
-function SearchFormBase() {
+export function SearchForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -39,13 +39,5 @@ function SearchFormBase() {
         placeholder="Buscar produtos"
       />
     </form>
-  )
-}
-
-export function SearchForm() {
-  return (
-    <Suspense>
-      <SearchFormBase />
-    </Suspense>
   )
 }
